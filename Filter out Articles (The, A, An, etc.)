@@ -1,0 +1,9 @@
+#Sort without articles such as "The" and "A"
+
+This is an easy way to sort a list of films for example so that The Machinist is sorted along with the "M"s rather than the "T"s?
+
+[Originally found tips at:] (https://ask.libreoffice.org/en/question/22637/how-do-i-sort-without-articles-such-as-the-and-a/)
+
+```
+ =IF(LEFT(A2,2)="A ",RIGHT(A2,LEN(A2)-2),IF(LEFT(A2,3)= "An ",RIGHT(A2,LEN(A2)-3),IF(LEFT(A2,4)="The ",RIGHT(A2, LEN(A2)-4),A2)))
+ ```
